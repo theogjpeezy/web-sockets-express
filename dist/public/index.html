@@ -1,0 +1,25 @@
+<script>
+    var ws = new WebSocket('ws://localhost:3000/ws');
+    // event emmited when connected
+    ws.onopen = function () {
+        console.log('websocket is connected ...')
+        // sending a send event to websocket server
+        ws.send('connected')
+    }
+    // event emmited when receiving message 
+    ws.onmessage = function (ev) {
+        const newItem = document.createElement("li");
+        const text = document.createTextNode(ev.data);
+        newItem.appendChild(text);
+        document.getElementById("messages").appendChild(newItem);
+    }
+</script>
+<body>
+    <h1>This is working</h1>
+    <div>
+        <ul id="messages">
+
+        </ul>
+    </div>
+</body>
+

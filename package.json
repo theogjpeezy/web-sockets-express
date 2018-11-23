@@ -1,0 +1,22 @@
+{
+  "name": "web-sockets-express",
+  "version": "1.0.0",
+  "description": "Test app for web sockets in express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && copyfiles -u 1 src/**/*.json src/**/*.html src/**/*.css dist",
+    "start": "cd dist && node index.js"
+  },
+  "author": "Justin Cronin",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.16.0",
+    "@types/express-ws": "^3.0.0",
+    "@types/node": "^10.12.10"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-ws": "^4.0.0"
+  }
+}
